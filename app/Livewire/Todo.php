@@ -2,27 +2,42 @@
 
 namespace App\Livewire;
 
-use App\Models\Todo as ModelsTodo;
+use App\Models\Todo as TodoItem;
 use Livewire\Component;
 
 class Todo extends Component
 {
     public $todos = [];
+    public $todoText = '';
     public function mount()
     {
         $this->showTodos();
     }
     public function addTodo()
     {
-
+        $todo = new TodoItem();
+        $todo->item = $this->todoText;
+        $todo->save();
+        $this->showTodos();
     }
-    public function todoCheck()
+    public function todoCheck($id)
     {
-
+        $todo = TodoItem::where('id', $id)->first();
+        if (!$todo) {
+            return;
+        }
+        $todo->is_done = !$todo->is_done;
+        $todo->save();
+        $this->showTodos();
     }
-    public function todoDelete()
+    public function todoDelete($id)
     {
-        
+        $todo = TodoItem::where('id', $id)->first();
+        if (!$todo) {
+            return;
+        }
+        $todo->delete();
+        $this->showTodos();
     }
     public function render()
     {
@@ -30,6 +45,6 @@ class Todo extends Component
     }
     public function showTodos()
     {
-        $this->todos = ModelsTodo::orderBy('created_at', 'DESC')->get();
+        $this->todos = TodoItem::orderBy('created_at', 'DESC')->get();
     }
 }
