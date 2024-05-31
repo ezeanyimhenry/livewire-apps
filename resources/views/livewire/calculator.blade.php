@@ -12,7 +12,7 @@
                 </select>
                 <input type="number" wire:model='number2' class="text-red-800">
                 <button wire:click='calculate'
-                    class="text-white rounded bg-red-800 hover:bg-red-400 py-2 px-4">=</button>
+                    class="text-white rounded bg-red-800 hover:bg-red-400 py-2 px-4" {{ $buttonIsDisabled ? 'disabled' : '' }}>=</button>
             </div>
             </p>
         </div>
