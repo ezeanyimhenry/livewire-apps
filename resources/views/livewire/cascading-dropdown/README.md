@@ -15,6 +15,14 @@ A basic select dropdown for continents, countries, and states.
 
 Follow the [installation instructions](../../../../README.md#installation) in the main README file to set up the project.
 
+## Database Seeding
+
+To seed the database with sample data for continents, countries, and states, run the following command:
+
+```sh
+php artisan migrate --seed
+```
+
 ## Usage
 
 Navigate to the Cascading Dropdown page:

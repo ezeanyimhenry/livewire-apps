@@ -58,6 +58,8 @@ A simple counter app that allows you to increment and decrement a counter.
 - Increment counter
 - Decrement counter
 
+[Read more](./resources/views/livewire/counter/README.md)
+
 ### 2. Todo List
 
 A simple todo list application that allows you to add, update, and delete tasks.
@@ -67,12 +69,16 @@ A simple todo list application that allows you to add, update, and delete tasks.
 - Mark tasks as completed
 - Delete tasks
 
+[Read more](./resources/views/livewire/todo/README.md)
+
 ### 3. Calculator
 
 A basic calculator that performs addition, subtraction, multiplication, and division.
 
 #### Features:
 - Basic arithmetic operations
+
+[Read more](./resources/views/livewire/calculator/README.md)
 
 ### 4. Cascading Dropdown
 
@@ -82,6 +88,8 @@ A basic select dropdown for continents, countries, and states.
 - Select a continent and see countries in that continent
 - Select a country and see states in that country
 - Seeding the database with continent, countries, and states.
+
+[Read more](./resources/views/livewire/cascading-dropdown/README.md)
 
 ## Usage
 
