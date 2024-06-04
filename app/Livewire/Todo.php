@@ -41,7 +41,7 @@ class Todo extends Component
     }
     public function render()
     {
-        return view('livewire.todo');
+        return view('livewire.todo.app');
     }
     public function showTodos()
     {

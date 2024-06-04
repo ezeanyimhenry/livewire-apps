@@ -38,9 +38,9 @@ To get started with these applications, follow these steps:
     php artisan key:generate
     ```
 
-4. **Run database migrations:**
+4. **Run database migrations with seed:**
     ```sh
-    php artisan migrate
+    php artisan migrate --seed
     ```
 
 5. **Serve the application:**
@@ -76,10 +76,12 @@ A basic calculator that performs addition, subtraction, multiplication, and divi
 
 ### 4. Cascading Dropdown
 
-shoer about .
+A basic select dropdown for continents, countries, and states.
 
 #### Features:
-- //features here
+- Select a continent and see countries in that continent
+- Select a country and see states in that country
+- Seeding the database with continent, countries, and states.
 
 ## Usage
 
@@ -88,6 +90,7 @@ Navigate to the specific application you want to explore:
 - **Counter App:** [http://localhost:8000/counter](http://localhost:8000/counter)
 - **Todo List:** [http://localhost:8000/todo](http://localhost:8000/todo)
 - **Calculator:** [http://localhost:8000/calculator](http://localhost:8000/calculator)
+- **Cascading Dropdown:** [http://localhost:8000/cascading-dropdown](http://localhost:8000/cascading-dropdown)
 
 Each application directory contains a `README.md` file with more detailed instructions on how to use and understand the specific app.
 

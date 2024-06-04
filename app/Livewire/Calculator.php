@@ -33,7 +33,7 @@ class Calculator extends Component
     }
     public function render()
     {
-        return view('livewire.calculator');
+        return view('livewire.calculator.app');
     }
 
     public function updated($property)
