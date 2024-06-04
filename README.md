@@ -74,6 +74,13 @@ A basic calculator that performs addition, subtraction, multiplication, and divi
 #### Features:
 - Basic arithmetic operations
 
+### 4. Cascading Dropdown
+
+shoer about .
+
+#### Features:
+- //features here
+
 ## Usage
 
 Navigate to the specific application you want to explore:
