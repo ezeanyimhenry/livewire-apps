@@ -9,30 +9,39 @@ use Livewire\Component;
 
 class CascadingDropdown extends Component
 {
-    public $continent;
-    public $country;
-    public $state;
     public $continents = [];
     public $countries = [];
     public $states = [];
+    public $selectedContinent = null;
+    public $selectedCountry = null;
+    public $selectedState = null;
 
     public function mount()
     {
         $this->continents = Continent::all();
     }
 
-    public function updatedContinent($value)
+    public function updateContinent()
     {
-        $this->country = null; // Reset country
-        $this->state = null; // Reset state
-        $this->countries = Country::where('continent_id', $value)->get();
-        $this->states = []; // Clear states
+        if ($this->selectedContinent  != '-1') {
+            $this->selectedCountry = null; // Reset country
+            $this->selectedState = null; // Reset state
+            $this->countries = Country::where('continent_id', $this->selectedContinent)->get();
+            $this->states = []; // Clear states
+        } else {
+            $this->countries = [];
+            $this->states = [];
+        }
     }
 
-    public function updatedCountry($value)
+    public function updateCountry()
     {
-        $this->state = null; // Reset state
-        $this->states = State::where('country_id', $value)->get();
+        if ($this->selectedCountry != '-1') {
+            $this->selectedState = null; // Reset state
+            $this->states = State::where('country_id', $this->selectedCountry)->get();
+        } else {
+            $this->states = [];
+        }
     }
 
     public function render()
